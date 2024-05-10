@@ -19,7 +19,7 @@ const Feed = (props: Props) => {
     <Alert className="my-8 mx-8 w-11/12">
       <AlertTitle>{props.activityLog.nama}</AlertTitle>
       <AlertDescription>
-        <p>{olahraga} Menit</p>
+        <p>{olahraga}</p>
         <p>{waktu} Menit</p>
         <p>{catatan}</p>
         <></>

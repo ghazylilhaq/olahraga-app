@@ -96,7 +96,7 @@ const DashboardDrawerForm = (props: Props) => {
                         <SelectContent>
                           <SelectItem value="Zalfa">
                             <div className="flex items-start gap-3 text-muted-foreground">
-                              {/* <Rabbit className="size-5" /> */}
+                              <Rabbit className="size-5" />
                               <div className="grid gap-0.5">
                                 <p className="font-medium text-foreground">
                                   Zalfa
