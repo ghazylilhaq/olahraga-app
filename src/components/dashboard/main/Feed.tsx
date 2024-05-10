@@ -3,6 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 
 type Props = {
   activityLog: {
+    nama: string;
     olahraga: string;
     waktu: number;
     catatan: string;
@@ -16,8 +17,9 @@ const Feed = (props: Props) => {
 
   return (
     <Alert className="my-8 mx-8 w-11/12">
-      <AlertTitle>{olahraga}</AlertTitle>
+      <AlertTitle>{nama}</AlertTitle>
       <AlertDescription>
+        <p>{olahraga} Menit</p>
         <p>{waktu} Menit</p>
         <p>{catatan}</p>
       </AlertDescription>

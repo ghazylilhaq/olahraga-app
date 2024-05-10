@@ -9,6 +9,7 @@ export async function createActivityLog(
   values: z.infer<typeof activitySchema>
 ) {
   const data = {
+    nama: values.nama,
     olahraga: values.olahraga,
     waktu: values.waktu,
     catatan: values.catatan,
@@ -16,6 +17,7 @@ export async function createActivityLog(
 
   const activityLog = await prisma.activity.create({
     data: {
+      nama: data.nama,
       olahraga: data.olahraga,
       waktu: data.waktu,
       catatan: data.catatan,

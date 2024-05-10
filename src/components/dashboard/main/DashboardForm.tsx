@@ -35,6 +35,7 @@ export default function Component() {
       olahraga: "",
       waktu: 0,
       catatan: "",
+      nama: "",
     },
   });
 
@@ -55,6 +56,62 @@ export default function Component() {
           <fieldset className="grid gap-6 rounded-lg border p-4">
             <legend className="-ml-1 px-1 text-sm font-medium">Activity</legend>
             <div className="grid gap-3">
+              <FormField
+                control={form.control}
+                name="nama"
+                render={({ field }) => (
+                  <FormItem>
+                    <FormLabel>Nama Lo!</FormLabel>
+
+                    <Select onValueChange={field.onChange}>
+                      <FormControl>
+                        <SelectTrigger
+                          id="nama"
+                          className="items-start [&_[data-description]]:hidden"
+                        >
+                          <SelectValue placeholder="select one" {...field} />
+                        </SelectTrigger>
+                      </FormControl>
+
+                      <SelectContent>
+                        <SelectItem value="Zalfa">
+                          <div className="flex items-start gap-3 text-muted-foreground">
+                            {/* <Rabbit className="size-5" /> */}
+                            <div className="grid gap-0.5">
+                              <p className="font-medium text-foreground">
+                                Zalfa
+                              </p>
+                            </div>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="Adit">
+                          <div className="flex items-start gap-3 text-muted-foreground">
+                            <Bird className="size-5" />
+                            <div className="grid gap-0.5">
+                              <p className="font-medium text-foreground">
+                                {" "}
+                                Adit
+                              </p>
+                            </div>
+                          </div>
+                        </SelectItem>
+                        <SelectItem value="Ghazy">
+                          <div className="flex items-start gap-3 text-muted-foreground">
+                            <Turtle className="size-5" />
+                            <div className="grid gap-0.5">
+                              <p className="font-medium text-foreground">
+                                Ghazy
+                              </p>
+                            </div>
+                          </div>
+                        </SelectItem>
+                      </SelectContent>
+                    </Select>
+                    <FormDescription>Abis ngapain tadi??</FormDescription>
+                    <FormMessage />
+                  </FormItem>
+                )}
+              />
               <FormField
                 control={form.control}
                 name="olahraga"

@@ -1,6 +1,7 @@
 import { string, z } from "zod";
 
 export const activitySchema = z.object({
+  nama: z.string().min(1, "Nama harus diisi"),
   olahraga: z
     .string({
       required_error: "Olahraga harus diisi",

@@ -9,6 +9,7 @@ datasource db {
 
 model Activity {
   id        Int      @id @default(autoincrement())
+  nama      String
   olahraga  String
   waktu     Int
   catatan   String
